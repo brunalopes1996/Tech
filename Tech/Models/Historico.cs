@@ -8,23 +8,21 @@ namespace Tech.Models;
     {
         [Key]
         public int Id { get; set; }
-
-        [StringLength(300)]
+       
         public string Erro { get; set; }
-        
-        [StringLength(300)]
+           
         public string Acerto { get; set; }
 
-        [Required(ErrorMessage = "Por favor, informe a Banca")]
+        [Required]
         public int UsuarioId { get; set; }
         [ForeignKey(nameof(UsuarioId))]
         public Usuario Usuario { get; set; }
 
-         [Required(ErrorMessage = "Questão incorreta")]
+        [Required(ErrorMessage = "Questão incorreta")]
          public int QuestionarioId { get; set; }
     
 
-          [ForeignKey(nameof(QuestionarioId))]
+        [ForeignKey(nameof(QuestionarioId))]
          public Questionario Questionario { get; set; }
 
 

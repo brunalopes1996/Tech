@@ -8,43 +8,44 @@ namespace Tech.Models;
     public class Questoes
 {
     [Key]
-      public int Id { get; set; }  
+      public int Id { get; set; } 
 
+    [Required]
+    [StringLength(500)]
       public string Questao { get; set; }
 
-        [StringLength(1000)]
+    [Required]
+    [StringLength(1000)]
+    public string Alternativa_A { get; set; }
 
-      public string Alternativa_A { get; set; }
-        [StringLength(1000)]
-
+    [Required]
+    [StringLength(1000)]
       public string Alternativa_B { get; set; }
+        
+        [Required]
         [StringLength(1000)]
-
-
       public string Alternativa_C { get; set; }
       
+         [Required]
          [StringLength(1000)]
-
       public string Alternativa_D { get; set; }
+        
+        [Required]
         [StringLength(1000)]
-
       public string Alternativa_E { get; set; }
       
+      [Required]
        [StringLength(1000)]
-
       public string Alternativa_Correta { get; set; }
        [StringLength(1000)]
 
       public string Imagem { get; set; }
-      
+
+     [ForeignKey(nameof(QuestionarioId))] 
     [Required(ErrorMessage = "Questão incorreta")]
      public int QuestionarioId { get; set; }
-    
-
-    [ForeignKey(nameof(QuestionarioId))]
-    public Questionario Questionario { get; set; }
-
-
         
+    public virtual Questionario Questionario { get; set; }
 }
+        
 

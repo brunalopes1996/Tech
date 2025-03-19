@@ -9,13 +9,16 @@ namespace Tech.Models;
         [Key]
         public int Id { get; set; }
 
+        [Required]
         [StringLength(300)]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Por favor, informe a Banca")]
+        [Required]
         public int BancaId { get; set; }
 
         [ForeignKey(nameof(BancaId))]
         public Banca Banca { get; set; }
+
+        public virtual ICollection<Questoes> Questoes { get; set; }
 
     }
