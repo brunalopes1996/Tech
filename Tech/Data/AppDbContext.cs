@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration.KeyPerFile;
 using Org.BouncyCastle.Asn1.Misc;
 
 
-namespace GStore.Data;
+namespace Tech.Data;
 
 public class AppDbContext : IdentityDbContext<Usuario>
 {

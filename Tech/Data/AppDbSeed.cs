@@ -2,7 +2,7 @@ using Tech.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace GStore.Data;
+namespace Tech.Data;
 
 public class AppDbSeed
 {
