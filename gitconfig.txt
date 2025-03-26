@@ -33,3 +33,60 @@ cd GStore
 executar o xamp e o MySql
 
 dotnet watch run 
+-------------------------------------------------------------
+
+
+public class Questionario
+{
+    public int Id { get; set; }
+    public string Pergunta { get; set; }
+    public string AlternativaA { get; set; }
+    public string AlternativaB { get; set; }
+    public string AlternativaC { get; set; }
+    public string AlternativaD { get; set; }
+    public string AlternativaE { get; set; }
+    public string RespostaCorreta { get; set; }
+}
+
+
+
+
+List<Questionario> produtoFotos = new List<Questionario>
+{
+    new Questionario { 
+        Id = 1, 
+        Pergunta = "Qual é a capital da França?", 
+        AlternativaA = "Londres",
+        AlternativaB = "Madrid",
+        AlternativaC = "Paris",
+        AlternativaD = "Berlim",
+        AlternativaE = "Roma",
+        RespostaCorreta = "C"
+    },
+    
+    new Questionario { 
+        Id = 2, 
+        Pergunta = "Qual é o resultado de 5 + 7?", 
+        AlternativaA = "10",
+        AlternativaB = "11",
+        AlternativaC = "12",
+        AlternativaD = "13",
+        AlternativaE = "14",
+        RespostaCorreta = "C"
+    },
+
+    new Questionario { 
+        Id = 3, 
+        Pergunta = "Quem escreveu 'Dom Quixote'?", 
+        AlternativaA = "Machado de Assis",
+        AlternativaB = "William Shakespeare",
+        AlternativaC = "Miguel de Cervantes",
+        AlternativaD = "José Saramago",
+        AlternativaE = "Eça de Queirós",
+        RespostaCorreta = "C"
+    }
+};
+
+
+builder.Entity<Questionario>().HasData(produtoFotos);
+

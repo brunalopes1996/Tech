@@ -9,7 +9,7 @@ public class AppDbSeed
     public AppDbSeed(ModelBuilder builder)
     {
         List<Banca> bancas = new() {
-            new Banca { Id = 1, Nome = "Smartphones" },
+            new Banca { Id = 1, Nome = "" },
             
         };
         builder.Entity<Banca>().HasData(bancas);

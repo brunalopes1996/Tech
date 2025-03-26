@@ -14,7 +14,7 @@ namespace Tech.Models;
         public string Acerto { get; set; }
 
         [Required]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         [ForeignKey(nameof(UsuarioId))]
         public Usuario Usuario { get; set; }
 
