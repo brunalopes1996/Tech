@@ -2,10 +2,6 @@ using Tech.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.Extensions.Configuration.KeyPerFile;
-using Org.BouncyCastle.Asn1.Misc;
-
 
 namespace Tech.Data;
 
@@ -35,8 +31,7 @@ public DbSet<Usuario> Usuarios {get; set;}
         builder.Entity<IdentityRoleClaim<string>>().ToTable("perfil_regra");
         #endregion
         
-        AppDbSeed seed = new(builder);   
-
+        AppDbSeed seed = new(builder);  
     }
 
 }

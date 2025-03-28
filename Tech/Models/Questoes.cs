@@ -16,27 +16,27 @@ namespace Tech.Models;
 
     [Required]
     [StringLength(1000)]
-    public string Alternativa_A { get; set; }
+    public string AlternativaA { get; set; }
 
     [Required]
     [StringLength(1000)]
-      public string Alternativa_B { get; set; }
+      public string AlternativaB { get; set; }
         
         [Required]
         [StringLength(1000)]
-      public string Alternativa_C { get; set; }
-      
+      public string AlternativaC { get; set; }
+    
          [Required]
          [StringLength(1000)]
-      public string Alternativa_D { get; set; }
+      public string AlternativaD { get; set; }
         
         [Required]
         [StringLength(1000)]
-      public string Alternativa_E { get; set; }
+      public string AlternativaE { get; set; }
       
       [Required]
        [StringLength(1000)]
-      public string Alternativa_Correta { get; set; }
+      public string AlternativaCorreta { get; set; }
        [StringLength(1000)]
 
       public string Imagem { get; set; }

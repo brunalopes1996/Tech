@@ -14,7 +14,7 @@ namespace Tech.Models;
         public string Nome { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(100)]
         public string Tipo { get; set; }
 
         public virtual ICollection<Questionario> Questionarios { get; set; }
