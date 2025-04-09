@@ -1,57 +1,16 @@
-﻿<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="top-container">
-        <h1>Dashboard</h1>
-    </div>
-    <div class="sidebar">
-        <h2>purpose</h2>
-        <img src="profile.jpg" alt="Foto do Usuário" class="profile-img">
-        <h4>Heather Parker</h4>
-        <p>Web Architect</p>
-    </div>
-    <div class="main-content">
-        <h2>Bom dia, Heather!</h2>
-        <p>Tenha um ótimo dia!</p>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card p-3">
-                    <h5>Engagement</h5>
-                    <canvas id="engagementChart"></canvas>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card p-3">
-                    <h5>Emails enviados</h5>
-                    <h2>98</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+﻿@{
+    ViewBag.Title = "Início";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-    <script>
-        const ctx = document.getElementById('engagementChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'],
-                datasets: [{
-                    label: 'Engajamento',
-                    data: [5, 10, 15, 25, 20, 18, 10],
-                    borderColor: 'purple',
-                    backgroundColor: 'rgba(128, 0, 128, 0.1)',
-                    tension: 0.4
-                }]
-            }
-        });
-    </script>
-</body>
-</html>
+
+
+<!-- Conteúdo principal -->
+<div class="container mt-5 text-center">
+    <h1>Bem-vindo!</h1>
+    
+    <!-- Espaço para imagem da logo -->
+    <div class="mt-4">
+        <img src="~/img/logo.jpg" alt="Logo EstudaConcursos" class="img-fluid" style="max-width: 300px;" />
+    </div>
+</div>
