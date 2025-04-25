@@ -40,6 +40,6 @@ https://themes.getbootstrap.com/preview/?theme_id=23693
 
 https://getbootstrap.com/docs/5.3/components/list-group/
 
-ainda falta finalizar a create.cshtml 
+ainda falta finalizar a Edit.cshtml 
 
 

@@ -1,0 +1,209 @@
+Nível médio
+
+11
+Q3219447
+Noções de InformáticaMicrosoft Word ,Editor de Textos - Microsoft Word e BrOffice.org Writer
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Provas: Avança SP - 2025 - Câmara de Itupeva - SP - Técnico Legislativo - Administração Geral 
+O uso de teclas de atalho no Microsoft Word proporciona maior agilidade na edição e formatação de textos, permitindo que o usuário execute comandos de forma rápida e eficiente. Considerando esse recurso, qual combinação de teclas deve ser utilizada para excluir a palavra localizada à direita do cursor?
+Alternativas
+A
+Ctrl + Delete
+B
+Ctrl + Backspace
+C
+Ctrl + Função
+D
+Ctrl + End
+E
+Ctrl + -
+Responder
+ Resposta: A
+12
+Q3219446
+Noções de InformáticaMicrosoft Word ,Editor de Textos - Microsoft Word e BrOffice.org Writer
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Provas: Avança SP - 2025 - Câmara de Itupeva - SP - Técnico Legislativo - Administração Geral 
+Antes de realizar a impressão de um documento no Microsoft Word, o usuário tem a possibilidade de visualizar o conteúdo e definir quais páginas serão impressas, ajustando configurações conforme necessário. Considerando os recursos disponíveis na tela de impressão, a imagem apresentada refere-se a:
+
+ 
+Alternativas
+A
+Uma ferramenta para ajustar a orientação da página.
+B
+Um recurso para selecionar o tipo de papel a ser utilizado.
+C
+Um controle deslizante de zoom no documento, permitindo ampliar ou reduzir a visualização para facilitar a leitura de textos pequenos.
+D
+Uma opção para configurar margens personalizadas.
+E
+Um contador para acompanhar a evolução da impressão.
+
+Resposta: C
+13
+Q3219445
+Noções de InformáticaSistema Operacional ,Windows 7
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Provas: Avança SP - 2025 - Câmara de Itupeva - SP - Técnico Legislativo - Administração Geral 
+No que diz respeito a interação com programas e aplicativos do Windows 7, o Prompt de Comando no Windows 7 é uma interface de linha de comando que possibilita a execução de diversas operações no sistema, oferecendo maior controle sobre arquivos e diretórios. Para exibir todos os arquivos e pastas contidos em um diretório específico, qual comando deve ser utilizado no programa: 
+Alternativas
+A
+Dir
+B
+Log
+C
+Conf
+D
+List
+E
+Inf
+Responder
+Resposta A
+14
+Q3219428
+Noções de InformáticaSistema Operacional
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Prova: Avança SP - 2025 - Câmara de Itupeva - SP - Técnico Legislativo - Tecnologia da informação
+Indique a alternativa que apresenta a implementação do .NET mais adequada para criação de aplicativos multiplataforma, que executam em Windows, Linux e macOS.
+Alternativas
+A
+Xamarin
+B
+Mono
+C
+UWP
+D
+.NET 5+
+E
+.Net Framework
+Responder
+Resposta: D
+15
+Q3219427
+Noções de InformáticaSistema Operacional ,Windows
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Prova: Avança SP - 2025 - Câmara de Itupeva - SP - Técnico Legislativo - Tecnologia da informação
+Um funcionário de uma empresa relata ao departamento de TI que o mouse de seu computador Windows não está funcionando, mesmo tendo testado outros periféricos do mesmo tipo e religar seu computador. Um dos técnicos de suporte instrui o funcionário a atualizar o driver do dispositivo manualmente. Qual das seguintes ações apresenta um método mais eficiente da resolução do problema?
+Alternativas
+A
+Reinicializar seu computador para que o sistema operacional realize a reinstalação automaticamente.
+B
+Acessar “Gerenciador de dispositivos”, localizar seu dispositivo e atualizá-lo.
+C
+Pesquisar na web um driver do fabricante do dispositivo.
+D
+Entrar em contato com o suporte da Microsoft e solicitar o driver do dispositivo.
+E
+Ativar a função de mouse virtual.
+Responder
+Resposta: B
+
+Nível superior
+
+1
+Q3254459
+Noções de InformáticaPlanilhas Eletrônicas - Microsoft Excel e BrOffice.org Calc ,Microsoft Excel 2016 e 365
+Ano: 2025 Banca: Instituto Consulplan Órgão: Câmara de Araraquara - SP Prova: Instituto Consulplan - 2025 - Câmara de Araraquara - SP - Consultor Legislativo
+No setor de planejamento estratégico da Câmara Municipal de Araraquara, um funcionário recebeu uma planilha no Excel M365 com dados de frequência de comparecimento de vereadores em sessões plenárias, organizados por nome, data e presença (indicado com “Presente” ou “Ausente”). O objetivo é destacar, em cada linha da planilha, as datas em que os vereadores estiveram ausentes. Para isso, foi solicitado o uso do recurso de formatação condicional no Excel M365. Assinale a afirmativa, a seguir, que descreve corretamente como configurar a formatação condicional para destacar as datas cujo valor da célula na coluna de presença seja igual a “Ausente”. 
+Alternativas
+A
+Inserir um filtro na coluna de Presença pelo menu “Dados”; filtrar pela palavra “Ausente”; e aplicar manualmente a cor desejada nas células. 
+B
+Selecionar toda a tabela; acessar o menu “Fórmulas”; criar uma nova regra condicional personalizada baseada no texto “Ausente”; e configurar as opções de preenchimento.  
+C
+Selecionar toda a coluna da tabela; acessar o menu “Página Inicial”; clicar em “Classificar e Filtrar”; e configurar uma nova regra para destacar células onde o texto seja “Ausente”. 
+D
+Acessar o menu “Exibir”; ativar o modo de Visualização de Fórmulas; selecionar a coluna Data; e aplicar uma formatação condicional baseada na fórmula =B2="Ausente", ajustando a formatação de acordo com a necessidade.  
+E
+Selecionar as células da coluna de presença; acessar o menu “Página Inicial”; clicar em “Formatação Condicional”; escolher “Realçar Regras das Células”; selecionar a opção “É Igual a”; digitar “Ausente” no campo de texto; e definir a formatação desejada.
+Responder
+Resposta: E
+2
+Q3254457
+Noções de InformáticaPlanilhas Eletrônicas - Microsoft Excel e BrOffice.org Calc ,Editor de Textos - Microsoft Word e BrOffice.org Writer ,Microsoft Word 2016 e 365( assuntos)
+Ano: 2025 Banca: Instituto Consulplan Órgão: Câmara de Araraquara - SP Prova: Instituto Consulplan - 2025 - Câmara de Araraquara - SP - Consultor Legislativo
+O setor de Recursos Humanos da Câmara Municipal de Araraquara precisa enviar uma notificação individualizada a todos os servidores sobre uma nova política de benefícios. Para agilizar o processo, optou-se pelo uso da Mala Direta do Microsoft Word (versão 365), vinculada a uma planilha do Excel que contém os dados de cada servidor: nome, endereço, cargo, e-mail e data de admissão. Além do texto principal, deseja-se que seja exibida automaticamente, no corpo da carta, uma mensagem adicional apenas para os servidores que têm mais de cinco anos de serviço, calculados com base na data de admissão. Considerando a necessidade de inserir essa mensagem condicional na correspondência personalizada, assinale a afirmativa que descreve corretamente como configurar a Regra “Se...Então...Senão” (If...Then...Else) no Word 365, a fim de exibir a mensagem somente para os servidores com mais de cinco anos de serviço. 
+Alternativas
+A
+Converter manualmente a data de admissão em cada carta gerada, usando a opção “Pesquisar e Substituir” para filtrar os servidores com mais de cinco anos, antes de efetivamente concluir a mala direta. 
+B
+Configurar a mala direta para que todos os destinatários recebam a mesma mensagem de forma genérica e, posteriormente, ocultar o texto manualmente nas cartas geradas para aqueles com menos de cinco anos de serviço. 
+C
+Ajustar a fonte da mensagem no próprio corpo do documento Word para cor branca sempre que o servidor tiver menos de cinco anos de serviço, tornando a mensagem invisível para esse grupo sem o uso de regras ou campos adicionais. 
+D
+Inserir um campo IF no Word que compara diretamente a data de admissão do servidor ao dia atual, usando a função interna do Word para subtrair datas e avaliar se o resultado é maior que cinco anos, sem necessidade de cálculos prévios. 
+E
+Criar, no Excel, uma coluna que calcule se o servidor já completou cinco anos de serviço (por exemplo, gerando “Sim” ou “Não”), e então usar o campo IF (Se...Então...Senão) no Word para inserir a mensagem somente quando o valor dessa coluna for “Sim”. 
+Responder
+Resposta: E
+
+32
+Q3220024
+Noções de InformáticaPlanilhas Eletrônicas - Microsoft Excel e BrOffice.org Calc ,Microsoft Excel
+Ano: 2025 Banca: Avança SP Órgão: Câmara de Itupeva - SP Prova: Avança SP - 2025 - Câmara de Itupeva - SP - Analista Legislativo - Contabilidade Pública
+Os gráficos são recursos visuais fundamentais no Microsoft Excel para representar e interpretar dados de maneira clara e objetiva. Entre os diversos tipos disponíveis, há um modelo em que as categorias são distribuídas de forma uniforme no eixo horizontal, enquanto os valores são organizados igualmente no eixo vertical. Esse tipo de gráfico é ideal para demonstrar a evolução de informações contínuas ao longo do tempo, facilitando a visualização de tendências em períodos regulares, como meses, trimestres ou anos fiscais.
+Com base nessa descrição, e na imagem a seguir, assinale a alternativa que identifica corretamente o tipo de gráfico mencionado:
+ 
+Fonte: 2 https://docs.ufpr.br/
+
+Alternativas
+A
+Gráfico de Pizza.
+B
+Gráfico de Linhas.
+C
+Gráfico de Radar.
+D
+Gráfico de Árvore (Treemap).
+E
+Gráfico de Histograma.
+Responder
+  Resposta: B
+38
+Q3219520
+Sistemas OperacionaisDeadlock ,Algoritmo de Escalonamento
+Ano: 2025 Banca: UFRR Órgão: UFRR Prova: UFRR - 2025 - UFRR - Analista de Tecnologia da Informação
+O Sistema Operacional (SO) precisa lidar constantemente com requisições por recursos, dependendo de um algoritmo para decidir qual processo consegue determinado recurso e quando. Considere a seguinte situação na qual muitos processos querem imprimir um documento: suponha que o algoritmo implementado no SO para decidir como alocar a impressora, cede esse dispositivo ao processo com o menor arquivo a ser impresso. Tal algoritmo busca maximizar o atendimento rápido a processos com pequenas tarefas a serem executadas. Ocorre que existem muitos processos requisitando a impressora, sendo que um desses processos possui um arquivo grande. Assim, a cada instante no qual a impressora está livre, o algoritmo do SO a disponibiliza para o próximo processo com arquivo pequeno para imprimir, de modo que o processo com arquivo grande é preterido indefinidamente, embora não esteja bloqueado. Essa situação leva o processo com arquivo grande a ser impresso a condição de _________.
+Alternativas
+A
+Starvation. 
+B
+Host. 
+C
+Livelock. 
+D
+Deadlock. 
+E
+Checkpoint. 
+Responder
+Resposta: A
+40
+Q3219518
+ProgramaçãoWeb
+Ano: 2025 Banca: UFRR Órgão: UFRR Prova: UFRR - 2025 - UFRR - Analista de Tecnologia da Informação
+A lista abaixo apresenta duas tecnologias amplamente utilizadas no contexto de servidores Web. Associe elas às suas características de acordo com sua numeração.
+
+1. Apache Webserver.
+2. Nginx. 
+
+( ) Utiliza um modelo orientado em eventos, no qual um único processo principal coordena vários processos trabalhadores, cada um com um único thread. 
+( ) Sua configuração é orientada a blocos. 
+( ) Utiliza um modelo baseado em processos/threads, em que cada conexão é gerenciada por um processo ou thread distinto.  
+( ) É nativamente mais estendido por módulos. 
+
+A sequência CORRETA dessa associação é: 
+Alternativas
+A
+(1) (2) (2) (2).
+B
+(2) (1) (1) (2).
+C
+(1) (1) (2) (2).
+D
+(2) (2) (1) (2).
+E
+(2) (1) (2) (1).
+Responder
+Resposta: D
+
+
+
+
+
+
+

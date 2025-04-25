@@ -1,73 +1,78 @@
 @model Tech.Models.Questoes
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Questoes";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Details</h1>
+<h1 class="my-4">Categoria</h1>
+<h4 class="mb-4">Alterar</h4>
 
-<div>
-    <h4>Questoes</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Questao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Questao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaA)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaA)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaB)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaB)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaC)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaC)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaD)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaD)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaE)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaE)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AlternativaCorreta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AlternativaCorreta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Imagem)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Imagem)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Questionario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Questionario.Nome)
-        </dd>
-    </dl>
+<div class="row">
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Questao)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.Questao)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaA)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaA)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaB)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaB)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaC)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaC)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaD)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaD)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaE)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaE)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.AlternativaCorreta)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.AlternativaCorreta)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Imagem)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.Imagem)
+    </div>
+    <div class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Questionario)
+    </div>
+    <div class="col-sm-10">
+        @Html.DisplayFor(model => model.Questionario.Nome)
+    </div>
+</div>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="d-flex mt-4">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-outline-warning me-2">
+            <i class="fas fa-edit me-1"></i> Alterar
+        </a>
+        <a asp-action="Index" class="btn btn-outline-info">
+            <i class="fas fa-home me-1"></i> Voltar
+        </a>
+    </div>
+</div>
 </div>
