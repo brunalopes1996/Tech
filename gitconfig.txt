@@ -42,4 +42,6 @@ https://getbootstrap.com/docs/5.3/components/list-group/
 
 ainda falta finalizar a Edit.cshtml 
 
+control K + c para deixar comentado
+
 
