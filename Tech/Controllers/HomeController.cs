@@ -21,6 +21,21 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Questoes()
+    {
+        return View();
+    }
+    
+    public IActionResult Concursos()
+    {
+        return View();
+    }
+    
+    public IActionResult PlanosdeAssinatura()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();
