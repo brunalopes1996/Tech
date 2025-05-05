@@ -1,90 +1,53 @@
 @model IEnumerable<Tech.Models.Questoes>
 
 @{
-    ViewData["Title"] = "Questoes";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Lista de Questões";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-fluid px-4">
-    <h1 class="my-4">Questões</h1>
-    <a asp-action="Create" class="btn btn-primary"><i class="fas fa-add me-1"></i> Adicionar</a>
-    <div class="card my-4">
-        <div class="card-body">
-            <table class="table d-none" id="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Questao)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaA)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaB)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaC)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaD)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaE)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AlternativaCorreta)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Imagem)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Questionario)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <a href="@Url.Action("Create")" class="btn btn-primary mb-3">Nova Questão</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Questão</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>Correta</th>
+                <th>Questionário</th>
+                <th>Imagem</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var questao in Model)
+        {
+            <tr>
+                <td>@questao.Questao</td>
+                <td>@questao.AlternativaA</td>
+                <td>@questao.AlternativaB</td>
+                <td>@questao.AlternativaC</td>
+                <td>@questao.AlternativaD</td>
+                <td>@questao.AlternativaE</td>
+                <td>@questao.AlternativaCorreta</td>
+                <td>@questao.Questionario.Nome</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(questao.Imagem))
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Questao)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaA)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaB)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaC)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaD)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaE)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AlternativaCorreta)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Imagem)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Questionario.Nome)
-                            </td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit me-1"></i></a>
-                                <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-search me-1"></i></a>
-                                <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash"></i></a>
-                            </td>
-                        </tr>
+                        <img src="@questao.Imagem" alt="Imagem" width="100" />
                     }
-                </tbody>
-            </table>
-        </div>
-    </div>
-@section Scripts {
-    <partial name="_DatatableScripts.cshtml"></partial>
-}
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = questao.Id })" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", new { id = questao.Id })" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

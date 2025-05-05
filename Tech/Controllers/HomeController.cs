@@ -31,7 +31,7 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult PlanosdeAssinatura()
+    public IActionResult Planos()
     {
         return View();
     }
