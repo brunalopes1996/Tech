@@ -1,17 +1,61 @@
 ﻿@{
-    ViewBag.Title = "Início";
-    Layout = "~/Views/Shared/_Layout.cshtml"; 
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-
-<!-- Conteúdo principal -->
-<div class="container mt-5 text-center">
-    <h1>Bem-vindo!</h1>
-    
-    <!-- Espaço para imagem da logo -->
-    <div class="mt-4">
-        <img src="~/img/Logo.png" alt="Logo EstudaConcursos" class="img-fluid" style="max-width: 500px;" />
+@if (Model != null && Model.Any())
+{
+    @foreach (var questao in Model)
+    {
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">@questao.Questao</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="optionA_@questao.Id" name="question@questao.Id"
+                        value="A">
+                    <label class="form-check-label" for="optionA_@questao.Id">A) @questao.AlternativaA</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="optionB_@questao.Id" name="question@questao.Id"
+                        value="B">
+                    <label class="form-check-label" for="optionB_@questao.Id">B) @questao.AlternativaB</label>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="card">
+        <div class="card-body">
+            This is some text within a card body.
+        </div>
     </div>
-</div>
-
+    <p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+            <label class="form-check-label" for="firstRadio">First radio</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+            <label class="form-check-label" for="secondRadio">Second radio</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+            <label class="form-check-label" for="thirdRadio">Third radio</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+            <label class="form-check-label" for="firstRadio">First radio</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+            <label class="form-check-label" for="secondRadio">Second radio</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+            <label class="form-check-label" for="thirdRadio">Third radio</label>
+        </li>
+    </ul>
+    </p>
+}

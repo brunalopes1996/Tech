@@ -1,33 +1,5 @@
+@model IEnumerable<Tech.Models.Questoes>
 @{
-    ViewData["Title"] = "Questões";
-}
-
-<h2>Questões</h2>
-
-@foreach(var questao in Model) {
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">@questao.Questao</h5>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="optionA_@questao.Id" name="question@questao.Id" value="A">
-                <label class="form-check-label" for="optionA_@questao.Id">A) @questao.AlternativaA</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="optionB_@questao.Id" name="question@questao.Id" value="B">
-                <label class="form-check-label" for="optionB_@questao.Id">B) @questao.AlternativaB</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="optionC_@questao.Id" name="question@questao.Id" value="C">
-                <label class="form-check-label" for="optionC_@questao.Id">C) @questao.AlternativaC</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="optionD_@questao.Id" name="question@questao.Id" value="D">
-                <label class="form-check-label" for="optionD_@questao.Id">D) @questao.AlternativaD</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="optionE_@questao.Id" name="question@questao.Id" value="E">
-                <label class="form-check-label" for="optionE_@questao.Id">E) @questao.AlternativaE</label>
-            </div>
-        </div>
-    </div>
+    ViewData["Title"] = "Questao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
