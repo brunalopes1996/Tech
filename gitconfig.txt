@@ -45,3 +45,39 @@ ainda falta finalizar a Edit.cshtml
 control K + c para deixar comentado
 
 
+<div class="card">
+        <div class="card-body">
+            O uso de teclas de atalho no Microsoft Word proporciona maior agilidade na edição e formatação de textos, permitindo que o usuário execute comandos de forma rápida e eficiente. Considerando esse recurso, qual combinação de teclas deve ser utilizada para excluir a palavra localizada à direita do cursor?
+        </div>
+    </div>
+    <p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+            <label class="form-check-label" for="firstRadio">Ctrl + Delete</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+            <label class="form-check-label" for="secondRadio">Ctrl + Backspace</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+            <label class="form-check-label" for="thirdRadio">Ctrl + Função</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+            <label class="form-check-label" for="firstRadio">Ctrl + End</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+            <label class="form-check-label" for="secondRadio">Ctrl + -</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+            <label class="form-check-label" for="thirdRadio">Third radio</label>
+        </li>
+    </ul>
+    </p>
+
+
+

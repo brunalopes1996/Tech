@@ -1,61 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Questoes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (Model != null && Model.Any())
-{
-    @foreach (var questao in Model)
+
+    @foreach (var questoes in Model)
     {
         <div class="card mb-4">
             <div class="card-body">
-                <h5 class="card-title">@questao.Questao</h5>
+                <h5 class="card-title">@questoes.Questao</h5>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="optionA_@questao.Id" name="question@questao.Id"
+                    <input class="form-check-input" type="checkbox" id="alternativaA_@questoes.Id" name="question@questao.Id"
                         value="A">
-                    <label class="form-check-label" for="optionA_@questao.Id">A) @questao.AlternativaA</label>
+                    <label class="form-check-label" for="alternativaA_@questoes.Id">A) @questoes.AlternativaA</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="optionB_@questao.Id" name="question@questao.Id"
+                    <input class="form-check-input" type="checkbox" id="alternativaB_@questoes.Id" name="question@questao.Id"
                         value="B">
-                    <label class="form-check-label" for="optionB_@questao.Id">B) @questao.AlternativaB</label>
+                    <label class="form-check-label" for="alternativaB_@questoes.Id">B) @questoes.AlternativaB</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="alternativaC_@questoes.Id" name="question@questao.Id"
+                        value="C">
+                    <label class="form-check-label" for="alternativaC_@questoes.Id">C) @questoes.AlternativaC</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="alternativaD_@questoes.Id" name="question@questao.Id"
+                        value="D">
+                    <label class="form-check-label" for="alternativaD_@questoes.Id">D) @questoes.AlternativaD</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="alternativaE_@questoes.Id" name="question@questao.Id"
+                        value="E">
+                    <label class="form-check-label" for="alternativaE_@questoes.Id">E) @questoes.AlternativaE</label>
                 </div>
             </div>
         </div>
-    }
 }
-else
-{
-    <div class="card">
-        <div class="card-body">
-            This is some text within a card body.
-        </div>
-    </div>
-    <p>
-    <ul class="list-group">
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
-            <label class="form-check-label" for="firstRadio">First radio</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
-            <label class="form-check-label" for="secondRadio">Second radio</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">Third radio</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
-            <label class="form-check-label" for="firstRadio">First radio</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
-            <label class="form-check-label" for="secondRadio">Second radio</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">Third radio</label>
-        </li>
-    </ul>
-    </p>
-}
+
+

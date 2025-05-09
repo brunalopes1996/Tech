@@ -66,6 +66,21 @@ public class AppDbSeed
 
         #endregion
 
+        
+
+        List<Questionario> questionario = new List<Questionario>()
+        {
+            new Questionario {
+                Id = 1,
+                Nome= "Teste",
+                BancaId = 2,
+                Banca = bancas[0]
+            },
+
+        };
+
+        builder.Entity<Questionario>().HasData(questionario);
+
         List<Historico> historico = new List<Historico> // Falta preencher os historicos dos erros e acertos do usuário
         {
             new Historico {
@@ -77,17 +92,6 @@ public class AppDbSeed
             },
         };
         builder.Entity<Historico>().HasData(historico);
-
-        // List<Questionario> questionario = new List<Questionario>()
-        // {
-        //     new Questionario {
-        //         Id = 1,
-        //         BancaId = 2,
-        //         Banca = bancas[0],
-        //         Questoes = 
-        //     },
-
-        // };
 
         List<Questoes> questoes = new List<Questoes>
         {
@@ -102,7 +106,7 @@ public class AppDbSeed
                 AlternativaD = "Ctrl + End",
                 AlternativaE = "Ctrl + -",
                 AlternativaCorreta = "A",
-                
+                QuestionarioId= 1
             },
             
 
@@ -116,10 +120,12 @@ public class AppDbSeed
                 AlternativaC = "Um controle deslizante de zoom no documento, permitindo ampliar ou reduzir a visualização para facilitar a leitura de textos pequenos.",
                 AlternativaD = "Uma opção para configurar margens personalizadas.",
                 AlternativaE = "Um contador para acompanhar a evolução da impressão.",
-                AlternativaCorreta = "C"
+                AlternativaCorreta = "C",
+                QuestionarioId= 1
             },
+            
            
-
+/*
             // Questão 3
               new Questoes
         {
@@ -228,11 +234,11 @@ public class AppDbSeed
         AlternativaD = "(2) (2) (1) (2).",
         AlternativaE = "(2) (1) (2) (1).",
         AlternativaCorreta = "D"
-        },
+        },*/
 
         };
         builder.Entity<Questoes>().HasData(questoes);
 
-    }    
+    }
 
 }
