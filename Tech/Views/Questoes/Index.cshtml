@@ -1,5 +1,53 @@
 @model IEnumerable<Tech.Models.Questoes>
+
 @{
-    ViewData["Title"] = "Questao";
+    ViewData["Title"] = "Questões";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Questões</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar Nova Questão</a>
+</p>
+
+@if (Model.Any()) {
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Questao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AlternativaCorreta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Questionario.Nome) 
+                </th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Questao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlternativaCorreta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Questionario.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+} else {
+    <p>Nenhuma questão encontrada.</p>
 }

@@ -23,7 +23,7 @@ public class HomeController : Controller
 
     public IActionResult Questoes()
     {
-        return View();
+        return RedirectToAction("Index", "Questoes");
     }
     
     public IActionResult Concursos()
