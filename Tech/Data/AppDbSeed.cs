@@ -69,7 +69,7 @@ public class AppDbSeed
         {
             new Questionario {
                 Id = 1,
-                Nome= "Teste",
+                Nome= "Questionario",
                 BancaId = 2,
             },
 
@@ -117,7 +117,7 @@ public class AppDbSeed
                 AlternativaD = "Uma opção para configurar margens personalizadas.",
                 AlternativaE = "Um contador para acompanhar a evolução da impressão.",
                 AlternativaCorreta = "C",
-                QuestionarioId= 2
+                QuestionarioId= 1
             },
 
 
@@ -133,7 +133,7 @@ public class AppDbSeed
                 AlternativaD = "List",
                 AlternativaE = "Inf",
                 AlternativaCorreta = "A",
-                QuestionarioId= 3
+                QuestionarioId= 1
             },
 
 
@@ -148,7 +148,7 @@ public class AppDbSeed
                 AlternativaD = ".NET 5+",
                 AlternativaE = ".Net Framework",
                 AlternativaCorreta = "D",
-                QuestionarioId= 4
+                QuestionarioId= 1
             },
 
 
@@ -164,7 +164,7 @@ public class AppDbSeed
                 AlternativaD = "Entrar em contato com o suporte da Microsoft e solicitar o driver do dispositivo.",
                 AlternativaE = "Ativar a função de mouse virtual.",
                 AlternativaCorreta = "B",
-                QuestionarioId= 5
+                QuestionarioId= 1
             },
 
 
@@ -179,7 +179,7 @@ public class AppDbSeed
                 AlternativaD = "Acessar o menu “Exibir”; ativar o modo de Visualização de Fórmulas; selecionar a coluna Data; e aplicar uma formatação condicional baseada na fórmula =B2='Ausente', ajustando a formatação de acordo com a necessidade. ",
                 AlternativaE = "Selecionar as células da coluna de presença; acessar o menu “Página Inicial”; clicar em “Formatação Condicional”; escolher “Realçar Regras das Células”; selecionar a opção “É Igual a”; digitar “Ausente” no campo de texto; e definir a formatação desejada.",
                 AlternativaCorreta = "A",
-                QuestionarioId= 6
+                QuestionarioId= 1
             },
 
 
@@ -195,7 +195,7 @@ public class AppDbSeed
                 AlternativaD = "Inserir um campo IF no Word que compara diretamente a data de admissão do servidor ao dia atual, usando a função interna do Word para subtrair datas e avaliar se o resultado é maior que cinco anos, sem necessidade de cálculos prévios.",
                 AlternativaE = "Criar, no Excel, uma coluna que calcule se o servidor já completou cinco anos de serviço (por exemplo, gerando “Sim” ou “Não”), e então usar o campo IF (Se...Então...Senão) no Word para inserir a mensagem somente quando o valor dessa coluna for “Sim”.",
                 AlternativaCorreta = "E",
-                QuestionarioId= 7
+                QuestionarioId= 1
             },
 
 
@@ -209,7 +209,7 @@ public class AppDbSeed
                 AlternativaD = "Gráfico de Árvore (Treemap).",
                 AlternativaE = "Gráfico de Histograma.",
                 AlternativaCorreta = "B",
-                QuestionarioId= 8
+                QuestionarioId= 1
             },
 
 
@@ -224,7 +224,7 @@ public class AppDbSeed
                 AlternativaD = "Deadlock.",
                 AlternativaE = "Checkpoint.",
                 AlternativaCorreta = "A",
-                QuestionarioId= 9
+                QuestionarioId= 1
             },
 
             new Questoes
@@ -237,7 +237,7 @@ public class AppDbSeed
                 AlternativaD = "(2) (2) (1) (2).",
                 AlternativaE = "(2) (1) (2) (1).",
                 AlternativaCorreta = "D",
-                QuestionarioId= 10
+                QuestionarioId= 1
             },
 
         };
