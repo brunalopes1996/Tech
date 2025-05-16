@@ -111,6 +111,7 @@ public class AppDbSeed
             {
                 Id = 2,
                 Questao = "Antes de realizar a impressão de um documento no Microsoft Word, o usuário tem a possibilidade de visualizar o conteúdo e definir quais páginas serão impressas, ajustando configurações conforme necessário. Considerando os recursos disponíveis na tela de impressão, a imagem apresentada refere-se a:",
+                Imagem = "../img/QuestaoEM.png",
                 AlternativaA = "Uma ferramenta para ajustar a orientação da página.",
                 AlternativaB = "Um recurso para selecionar o tipo de papel a ser utilizado.",
                 AlternativaC = "Um controle deslizante de zoom no documento, permitindo ampliar ou reduzir a visualização para facilitar a leitura de textos pequenos.",
@@ -203,6 +204,7 @@ public class AppDbSeed
             {
                 Id = 8,
                 Questao = "Os gráficos são recursos visuais fundamentais no Microsoft Excel para representar e interpretar dados de maneira clara e objetiva. Entre os diversos tipos disponíveis, há um modelo em que as categorias são distribuídas de forma uniforme no eixo horizontal, enquanto os valores são organizados igualmente no eixo vertical. Esse tipo de gráfico é ideal para demonstrar a evolução de informações contínuas ao longo do tempo, facilitando a visualização de tendências em períodos regulares, como meses, trimestres ou anos fiscais.Com base nessa descrição, e na imagem a seguir, assinale a alternativa que identifica corretamente o tipo de gráfico mencionado:",
+                Imagem = "../img/QuestaoES.png",
                 AlternativaA = "Gráfico de Pizza.",
                 AlternativaB = "Gráfico de Linhas.",
                 AlternativaC = "Gráfico de Radar.",
@@ -230,7 +232,7 @@ public class AppDbSeed
             new Questoes
             {
                 Id = 10,
-                Questao = "A lista abaixo apresenta duas tecnologias amplamente utilizadas no contexto de servidores Web. Associe elas às suas características de acordo com sua numeração. 1. Apache Webserver. 2. Nginx ( ) Utiliza um modelo orientado em eventos, no qual um único processo principal coordena vários processos trabalhadores, cada um com um único thread. ( ) Sua configuração é orientada a blocos. ( ) Utiliza um modelo baseado em processos/threads, em que cada conexão é gerenciada por um processo ou thread distinto.  ( ) É nativamente mais estendido por módulos. A sequência CORRETA dessa associação é: ",
+                Questao = "A lista abaixo apresenta duas tecnologias amplamente utilizadas no contexto de servidores Web. Associe elas às suas características de acordo com sua numeração.<br>1. Apache Webserver.<br>2. Nginx<br>( ) Utiliza um modelo orientado em eventos, no qual um único processo principal coordena vários processos trabalhadores, cada um com um único thread.<br>( ) Sua configuração é orientada a blocos. <br>( ) Utiliza um modelo baseado em processos/threads, em que cada conexão é gerenciada por um processo ou thread distinto.<br>( ) É nativamente mais estendido por módulos. <br>A sequência CORRETA dessa associação é: ",
                 AlternativaA = "(1) (2) (2) (2).",
                 AlternativaB = "(2) (1) (1) (2).",
                 AlternativaC = "(1) (1) (2) (2).",

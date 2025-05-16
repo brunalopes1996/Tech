@@ -10,7 +10,7 @@ namespace Tech.Models;
         public int Id { get; set; }
 
         [Required]
-        [StringLength(300)]
+        [StringLength(300000)]
         public string Nome { get; set; }
 
         [Required]

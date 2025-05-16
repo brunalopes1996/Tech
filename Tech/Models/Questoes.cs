@@ -11,7 +11,7 @@ public class Questoes
   public int Id { get; set; }
 
   [Required]
-  [StringLength(500)]
+  [StringLength(5000)]
   public string Questao { get; set; }
 
   [Required]
