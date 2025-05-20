@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tech.Data;
 using Tech.Models;
@@ -49,8 +48,6 @@ namespace Tech.Controllers
         }
 
         // POST: Questoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Questao,AlternativaA,AlternativaB,AlternativaC,AlternativaD,AlternativaE,AlternativaCorreta,Imagem,QuestionarioId")] Questoes questoes)
@@ -83,8 +80,6 @@ namespace Tech.Controllers
         }
 
         // POST: Questoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Questao,AlternativaA,AlternativaB,AlternativaC,AlternativaD,AlternativaE,AlternativaCorreta,Imagem,QuestionarioId")] Questoes questoes)
@@ -150,6 +145,26 @@ namespace Tech.Controllers
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        // GET: Questoes/Responder/5
+        public async Task<IActionResult> Responder(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var questao = await _context.Questoes
+                .Include(q => q.Questionario)
+                .FirstOrDefaultAsync(m => m.Id == id);
+                
+            if (questao == null)
+            {
+                return NotFound();
+            }
+
+            return View(questao);
         }
 
         private bool QuestoesExists(int id)

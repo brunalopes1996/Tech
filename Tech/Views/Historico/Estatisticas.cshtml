@@ -1,0 +1,82 @@
+@{
+    ViewData["Title"] = "Estatísticas de Desempenho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Estatísticas de Desempenho</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Resumo de Respostas</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Total de Respostas:</strong> @ViewBag.TotalRespostas</p>
+                    <p><strong>Total de Acertos:</strong> @ViewBag.TotalAcertos</p>
+                    <p><strong>Total de Erros:</strong> @ViewBag.TotalErros</p>
+                    <p><strong>Percentual de Acertos:</strong> @Math.Round(ViewBag.PercentualAcertos, 2)%</p>
+                    <p><strong>Percentual de Erros:</strong> @Math.Round(ViewBag.PercentualErros, 2)%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Gráfico de Desempenho</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="graficoDesempenho"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('graficoDesempenho').getContext('2d');
+            
+            const graficoDesempenho = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Acertos', 'Erros'],
+                    datasets: [{
+                        data: [@ViewBag.TotalAcertos, @ViewBag.TotalErros],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(255, 99, 132, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

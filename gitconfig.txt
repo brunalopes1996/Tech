@@ -7,9 +7,9 @@ git config --global user.name IttaRodrigues
 git config --global user.email itamararodriguesdeoliveira@gmail.com
 
 
-dotnet new sln --name GStore
-dotnet new mvc -o GStore
-dotnet sln add GStore\GStore.csproj
+dotnet new sln --name Tech
+dotnet new mvc -o Tech
+dotnet sln add Tech\Tech.csproj
 
 
 
@@ -28,7 +28,7 @@ Configura a ConnectionString appsettings.json
 Configura os serviços de Context e Identity no Program.cs
 
 
-cd GStore 
+cd Tech 
 
 executar o xamp e o MySql
 
