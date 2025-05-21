@@ -1,0 +1,104 @@
+<div class="container mt-4">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Questao</h5>
+            
+            @if (!string.IsNullOrEmpty(Model.Imagem))
+            {
+                <div class="mb-3">
+                    <img src="@Model.Imagem" alt="Imagem da questão" class="img-fluid" />
+                </div>
+            }
+            
+            <form id="formResposta" method="post" action="@Url.Action("RegistrarResposta", "Historico")">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="questaoId" value="@Model.Id" />
+                
+                <div class="form-check mb-2">
+                    <input class="form-check-input resposta-option" type="radio" name="alternativaSelecionada" id="alternativaA" value="A">
+                    <label class="form-check-label" for="alternativaA">A) @Model.AlternativaA</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input resposta-option" type="radio" name="alternativaSelecionada" id="alternativaB" value="B">
+                    <label class="form-check-label" for="alternativaB">B) @Model.AlternativaB</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input resposta-option" type="radio" name="alternativaSelecionada" id="alternativaC" value="C">
+                    <label class="form-check-label" for="alternativaC">C) @Model.AlternativaC</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input resposta-option" type="radio" name="alternativaSelecionada" id="alternativaD" value="D">
+                    <label class="form-check-label" for="alternativaD">D) @Model.AlternativaD</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input resposta-option" type="radio" name="alternativaSelecionada" id="alternativaE" value="E">
+                    <label class="form-check-label" for="alternativaE">E) @Model.AlternativaE</label>
+                </div>
+                
+                <div class="mt-3">
+                    <button type="submit" id="btnResponder" class="btn btn-primary">Responder</button>
+                </div>
+            </form>
+            
+            <div id="resultadoResposta" class="mt-3" style="display: none;">
+                <div id="respostaCorreta" class="alert alert-success" style="display: none;">
+                    <i class="bi bi-check-circle-fill"></i> Resposta correta!
+                </div>
+                <div id="respostaIncorreta" class="alert alert-danger" style="display: none;">
+                    <i class="bi bi-x-circle-fill"></i> Resposta incorreta. A alternativa correta é <span id="alternativaCorreta"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-3">
+        <a href="@Url.Action("Index", "Historico")" class="btn btn-outline-secondary">Ver Histórico de Respostas</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $("#formResposta").submit(function(e) {
+                e.preventDefault();
+                
+                const alternativaSelecionada = $("input[name='alternativaSelecionada']:checked").val();
+                
+                if (!alternativaSelecionada) {
+                    alert("Por favor, selecione uma alternativa.");
+                    return;
+                }
+                
+                // Desabilitar botão e opções durante o processamento
+                $("#btnResponder").prop("disabled", true);
+                $(".resposta-option").prop("disabled", true);
+                
+                // Enviar resposta para o servidor
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(result) {
+                        // Mostrar resultado
+                        $("#resultadoResposta").show();
+                        
+                        if (result.acertou) {
+                            $("#respostaCorreta").show();
+                            $("#respostaIncorreta").hide();
+                        } else {
+                            $("#respostaIncorreta").show();
+                            $("#respostaCorreta").hide();
+                            $("#alternativaCorreta").text(result.message.split("é ")[1]);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Erro:", xhr.responseText);
+                        alert("Ocorreu um erro ao processar sua resposta. Por favor, tente novamente.");
+                        $("#btnResponder").prop("disabled", false);
+                        $(".resposta-option").prop("disabled", false);
+                    }
+                });
+            });
+        });
+    </script>
+}

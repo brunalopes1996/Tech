@@ -19,7 +19,7 @@ namespace Tech.Controllers
         public async Task<IActionResult> Index()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            
+
             if (string.IsNullOrEmpty(userId))
             {
                 return RedirectToAction("Login", "Account");
@@ -40,7 +40,7 @@ namespace Tech.Controllers
         public async Task<IActionResult> Estatisticas()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            
+
             if (string.IsNullOrEmpty(userId))
             {
                 return RedirectToAction("Login", "Account");
@@ -59,7 +59,7 @@ namespace Tech.Controllers
             ViewBag.TotalAcertos = totalAcertos;
             ViewBag.TotalErros = totalErros;
             ViewBag.TotalRespostas = historico.Count;
-            
+
             // Calcular percentuais
             ViewBag.PercentualAcertos = historico.Count > 0 ? (double)totalAcertos / historico.Count * 100 : 0;
             ViewBag.PercentualErros = historico.Count > 0 ? (double)totalErros / historico.Count * 100 : 0;
@@ -69,10 +69,12 @@ namespace Tech.Controllers
 
         // POST: Registrar resposta
         [HttpPost]
+        [Route("Historico/RegistrarResposta")] 
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegistrarResposta(int questaoId, string alternativaSelecionada)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            
+
             if (string.IsNullOrEmpty(userId))
             {
                 return Json(new { success = false, message = "Usuário não autenticado" });
@@ -107,8 +109,9 @@ namespace Tech.Controllers
             _context.Historicos.Add(historico);
             await _context.SaveChangesAsync();
 
-            return Json(new { 
-                success = true, 
+            return Json(new
+            {
+                success = true,
                 acertou = acertou,
                 message = acertou ? "Resposta correta!" : "Resposta incorreta. A alternativa correta é " + questao.AlternativaCorreta
             });

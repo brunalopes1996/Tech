@@ -77,18 +77,6 @@ public class AppDbSeed
 
         builder.Entity<Questionario>().HasData(questionario);
 
-        List<Historico> historico = new List<Historico> // Falta preencher os historicos dos erros e acertos do usuário
-        {
-            new Historico {
-                Id= 1,
-                Erro= " " ,
-                Acerto= " ",
-                UsuarioId= usuarios[0].Id,
-                QuestionarioId= 1
-            },
-        };
-        builder.Entity<Historico>().HasData(historico);
-
         List<Questoes> questoes = new List<Questoes>
         {
 
@@ -170,7 +158,8 @@ public class AppDbSeed
 
 
 
-            new Questoes
+
+             new Questoes
             {
                 Id = 6,
                 Questao = "No setor de planejamento estratégico da Câmara Municipal de Araraquara, um funcionário recebeu uma planilha no Excel M365 com dados de frequência de comparecimento de vereadores em sessões plenárias, organizados por nome, data e presença (indicado com “Presente” ou “Ausente”). O objetivo é destacar, em cada linha da planilha, as datas em que os vereadores estiveram ausentes. Para isso, foi solicitado o uso do recurso de formatação condicional no Excel M365. Assinale a afirmativa, a seguir, que descreve corretamente como configurar a formatação condicional para destacar as datas cujo valor da célula na coluna de presença seja igual a “Ausente”.",
@@ -186,7 +175,7 @@ public class AppDbSeed
 
 
 
-            new Questoes
+             new Questoes
             {
                 Id = 7,
                 Questao = "O setor de Recursos Humanos da Câmara Municipal de Araraquara precisa enviar uma notificação individualizada a todos os servidores sobre uma nova política de benefícios. Para agilizar o processo, optou-se pelo uso da Mala Direta do Microsoft Word (versão 365), vinculada a uma planilha do Excel que contém os dados de cada servidor: nome, endereço, cargo, e-mail e data de admissão. Além do texto principal, deseja-se que seja exibida automaticamente, no corpo da carta, uma mensagem adicional apenas para os servidores que têm mais de cinco anos de serviço, calculados com base na data de admissão. Considerando a necessidade de inserir essa mensagem condicional na correspondência personalizada, assinale a afirmativa que descreve corretamente como configurar a Regra “Se...Então...Senão” (If...Then...Else) no Word 365, a fim de exibir a mensagem somente para os servidores com mais de cinco anos de serviço. ",
@@ -245,6 +234,20 @@ public class AppDbSeed
         };
         builder.Entity<Questoes>().HasData(questoes);
 
+        
+        List<Historico> historico = new List<Historico>
+        {
+            new Historico {
+                Id= 1,
+                Erro= " " ,
+                Acerto= " ",
+                UsuarioId= usuarios[0].Id,
+                QuestionarioId= 1,
+                QuestaoId = 1, 
+                AlternativaSelecionada = "A", 
+                Acertou = false 
+            },
+        };
+        builder.Entity<Historico>().HasData(historico);
     }
-
 }

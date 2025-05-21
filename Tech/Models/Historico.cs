@@ -8,7 +8,6 @@ public class Historico
 {
     [Key]
     public int Id { get; set; }
-
     
     public bool Acertou { get; set; }
   

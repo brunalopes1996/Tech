@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tech.Data;
 using Tech.Models;
@@ -14,14 +15,14 @@ namespace Tech.Controllers
             _context = context;
         }
 
-        // GET: Questoes
+        
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Questoes.Include(q => q.Questionario);
             return View(await appDbContext.ToListAsync());
         }
 
-        // GET: Questoes/Details/5
+       
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -40,14 +41,14 @@ namespace Tech.Controllers
             return View(questoes);
         }
 
-        // GET: Questoes/Create
+       
         public IActionResult Create()
         {
             ViewData["QuestionarioId"] = new SelectList(_context.Questionarios, "Id", "Nome");
             return View();
         }
 
-        // POST: Questoes/Create
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Questao,AlternativaA,AlternativaB,AlternativaC,AlternativaD,AlternativaE,AlternativaCorreta,Imagem,QuestionarioId")] Questoes questoes)
@@ -62,7 +63,7 @@ namespace Tech.Controllers
             return View(questoes);
         }
 
-        // GET: Questoes/Edit/5
+        
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,7 +80,6 @@ namespace Tech.Controllers
             return View(questoes);
         }
 
-        // POST: Questoes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Questao,AlternativaA,AlternativaB,AlternativaC,AlternativaD,AlternativaE,AlternativaCorreta,Imagem,QuestionarioId")] Questoes questoes)
@@ -113,7 +113,7 @@ namespace Tech.Controllers
             return View(questoes);
         }
 
-        // GET: Questoes/Delete/5
+        
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -132,7 +132,7 @@ namespace Tech.Controllers
             return View(questoes);
         }
 
-        // POST: Questoes/Delete/5
+      
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -147,7 +147,7 @@ namespace Tech.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Questoes/Responder/5
+        
         public async Task<IActionResult> Responder(int? id)
         {
             if (id == null)
