@@ -1,0 +1,120 @@
+@model Tech.Models.ResultadoViewModel
+
+@{
+    ViewData["Title"] = "Resultado do Questionário";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Resultado: @Model.QuestionarioNome</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Resumo</h4>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total de Questões
+                            <span class="badge bg-primary rounded-pill">@Model.TotalQuestoes</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Acertos
+                            <span class="badge bg-success rounded-pill">@Model.Acertos</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Percentual
+                            <span class="badge bg-info rounded-pill">@Model.Percentual.ToString("F1")%</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center">
+                        @if (Model.Aprovado)
+                        {
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Parabéns!</h4>
+                                <p>Você foi aprovado neste questionário.</p>
+                                <hr>
+                                <p class="mb-0">Continue praticando para melhorar ainda mais!</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning" role="alert">
+                                <h4 class="alert-heading">Quase lá!</h4>
+                                <p>Você não atingiu a pontuação mínima para aprovação.</p>
+                                <hr>
+                                <p class="mb-0">Revise o conteúdo e tente novamente!</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de desempenho (opcional) -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="progress" style="height: 30px;">
+                        <div class="progress-bar bg-success" role="progressbar" 
+                             style="width: @(Model.Percentual)%;" 
+                             aria-valuenow="@Model.Percentual" aria-valuemin="0" aria-valuemax="100">
+                            @Model.Percentual.ToString("F1")%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detalhes das respostas (opcional) -->
+            @if (Model.DetalhesRespostas != null && Model.DetalhesRespostas.Any())
+            {
+                <div class="mt-5">
+                    <h4>Detalhes das Respostas</h4>
+                    <div class="accordion" id="accordionRespostas">
+                        @for (int i = 0; i < Model.DetalhesRespostas.Count; i++)
+                        {
+                            var detalhe = Model.DetalhesRespostas[i];
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading@(i)">
+                                    <button class="accordion-button @(detalhe.Acertou ? "text-success" : "text-danger") @(i > 0 ? "collapsed" : "")" 
+                                            type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapse@(i)" 
+                                            aria-expanded="@(i == 0 ? "true" : "false")" 
+                                            aria-controls="collapse@(i)">
+                                        Questão @(i+1): @(detalhe.Acertou ? "Correta" : "Incorreta")
+                                    </button>
+                                </h2>
+                                <div id="collapse@(i)" class="accordion-collapse collapse @(i == 0 ? "show" : "")" 
+                                     aria-labelledby="heading@(i)" data-bs-parent="#accordionRespostas">
+                                    <div class="accordion-body">
+                                        <p><strong>Pergunta:</strong> @Html.Raw(detalhe.QuestaoTexto)</p>
+                                        <p><strong>Sua resposta:</strong> @detalhe.RespostaUsuario</p>
+                                        <p><strong>Resposta correta:</strong> @detalhe.RespostaCorreta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            
+            <div class="text-center mt-5">
+                <a asp-action="ExibirQuestionario" asp-controller="Home" class="btn btn-primary me-2">Tentar Novamente</a>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Voltar para a Página Inicial</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Opcional: Adicionar animações ou efeitos visuais
+        $(document).ready(function() {
+            // Animar a barra de progresso
+            $('.progress-bar').each(function() {
+                var width = $(this).attr('aria-valuenow') + '%';
+                $(this).animate({ width: width }, 1000);
+            });
+        });
+    </script>
+}
