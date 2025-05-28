@@ -569,7 +569,7 @@ namespace Tech.Migrations
                             ConcurrencyStamp = "39fd4d92-0c5b-4de5-a309-89ddceb51775",
                             Email = "bruuna.oliveiraa1@gmail.com",
                             EmailConfirmed = true,
-                            Foto = "/img/usuarios/ddf093a6-6cb5-4ff7-9a64-83da34aee005.png",
+                            Foto = "/img/IconeMasculino.png",
                             LockoutEnabled = true,
                             Nome = "Bruna Maria Lopes de Oliveira",
                             NormalizedEmail = "BRUUNA.OLIVEIRAA1@GMAIL.COM",

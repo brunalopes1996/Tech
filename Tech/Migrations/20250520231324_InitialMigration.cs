@@ -299,7 +299,7 @@ namespace Tech.Migrations
             migrationBuilder.InsertData(
                 table: "usuario",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "Foto", "LockoutEnabled", "LockoutEnd", "Nome", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "39fd4d92-0c5b-4de5-a309-89ddceb51775", "bruuna.oliveiraa1@gmail.com", true, "/img/usuarios/ddf093a6-6cb5-4ff7-9a64-83da34aee005.png", true, null, "Bruna Maria Lopes de Oliveira", "BRUUNA.OLIVEIRAA1@GMAIL.COM", "BRUNALOPES", "AQAAAAIAAYagAAAAEGgt8SmlaMYSpx5IXavo+aRKuljmVCojeawjcGWuY+jk0XH7MRl/UKwDOUtxYuqi9A==", null, false, "e265f229-2d71-458d-bae0-57efab605b88", false, "BrunaLopes" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "39fd4d92-0c5b-4de5-a309-89ddceb51775", "bruuna.oliveiraa1@gmail.com", true, "/img/IconeMasculino.png", true, null, "Bruna Maria Lopes de Oliveira", "BRUUNA.OLIVEIRAA1@GMAIL.COM", "BRUNALOPES", "AQAAAAIAAYagAAAAEGgt8SmlaMYSpx5IXavo+aRKuljmVCojeawjcGWuY+jk0XH7MRl/UKwDOUtxYuqi9A==", null, false, "e265f229-2d71-458d-bae0-57efab605b88", false, "BrunaLopes" });
 
             migrationBuilder.InsertData(
                 table: "questionario",

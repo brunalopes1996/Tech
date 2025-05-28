@@ -122,13 +122,13 @@ public class AccountController : Controller
                 if (registro.Foto != null)
                 {
                     string nomeArquivo = usuario.Id + Path.GetExtension(registro.Foto.FileName);
-                    string caminho = Path.Combine(_host.WebRootPath, @"img\usuarios");
+                    string caminho = Path.Combine(_host.WebRootPath, @"\img");
                     string novoArquivo = Path.Combine(caminho, nomeArquivo);
                     using (var stream = new FileStream(novoArquivo, FileMode.Create))
                     {
                         registro.Foto.CopyTo(stream);
                     }
-                    usuario.Foto = @"\img\usuarios\" + nomeArquivo;
+                    usuario.Foto = @"\img\" + nomeArquivo;
                     await _db.SaveChangesAsync();
                 }
                 TempData["Success"] = "Conta Criada com Sucesso!";

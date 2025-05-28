@@ -53,8 +53,9 @@ public class AppDbSeed
                 LockoutEnabled = true,
                 EmailConfirmed = true,
                 Nome = "Bruna Maria Lopes de Oliveira",
-                Foto = "/img/usuarios/ddf093a6-6cb5-4ff7-9a64-83da34aee005.png"
+                Foto = "/img/IconeMasculino.png"
             }
+            
         };
         foreach (var user in usuarios)
         {
@@ -62,6 +63,27 @@ public class AppDbSeed
             user.PasswordHash = pass.HashPassword(user, "123456");
         }
         builder.Entity<Usuario>().HasData(usuarios);
+
+
+#region Populate UserRole - Usuário com Perfil
+        List<IdentityUserRole<string>> userRoles = new()
+        {
+            new IdentityUserRole<string>() {
+                UserId = usuarios[0].Id,
+                RoleId = roles[0].Id
+            },
+            new IdentityUserRole<string>() {
+                UserId = usuarios[0].Id,
+                RoleId = roles[1].Id
+            },
+            new IdentityUserRole<string>() {
+                UserId = usuarios[0].Id,
+                RoleId = roles[2].Id
+            }
+        };
+        builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
+        #endregion
+
 
         #endregion        
 
