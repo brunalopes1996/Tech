@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Tech.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/ajustes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/theme.css" asp-append-version="true" />
 
 </head>
 
@@ -41,6 +42,10 @@
                             <a class="nav-link" asp-action="Planos">Planos de Assinatura</a>
                         </li>
                     </ul>
+                    <button id="theme-toggle-button" class="btn btn-secondary ms-2">
+                        <span class="theme-icon-light">☀️</span> <!-- Ícone Sol -->
+                        <span class="theme-icon-dark">🌙</span> <!-- Ícone Lua -->
+                    </button>
                     <div class="ms-3">
                         <partial name="_LoginPartial">
                     </div>
