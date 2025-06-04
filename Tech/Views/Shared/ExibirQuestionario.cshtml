@@ -1,0 +1,91 @@
+@model Tech.Models.Questionario
+
+@{ 
+    ViewData["Title"] = "Responder Questionário";
+   
+     
+}
+
+<div class="container mt-5">
+    @if (Model != null && Model.Questoes != null && Model.Questoes.Any())
+    {
+        <h2 class="text-center mb-4">@Model.Nome</h2>
+        <form asp-action="SubmeterRespostas" asp-controller="Home" method="post"> 
+            <input type="hidden" name="questionarioId" value="@Model.Id" />
+            @{ int contadorQuestoes = 0; }
+            @foreach (var questao in Model.Questoes)
+            {
+                contadorQuestoes++;
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Questão @contadorQuestoes</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 1.1rem;">@Html.Raw(questao.Questao)</p>
+                        
+                        @if (!string.IsNullOrEmpty(questao.Imagem))
+                        {
+                            <div class="mb-3 text-center">
+                                <img src="@Url.Content(questao.Imagem)" alt="Imagem da Questão @contadorQuestoes" class="img-fluid rounded" style="max-height: 300px;" />
+                            </div>
+                        }
+                        
+                        <div class="list-group">
+                            <label class="list-group-item list-group-item-action">
+                                <input class="form-check-input me-2" type="radio" name="respostas[@(questao.Id)]" value="A" id="q@(questao.Id)aA">
+                                <strong>A)</strong> @Html.Raw(questao.AlternativaA)
+                            </label>
+                            <label class="list-group-item list-group-item-action">
+                                <input class="form-check-input me-2" type="radio" name="respostas[@(questao.Id)]" value="B" id="q@(questao.Id)aB">
+                                <strong>B)</strong> @Html.Raw(questao.AlternativaB)
+                            </label>
+                            <label class="list-group-item list-group-item-action">
+                                <input class="form-check-input me-2" type="radio" name="respostas[@(questao.Id)]" value="C" id="q@(questao.Id)aC">
+                                <strong>C)</strong> @Html.Raw(questao.AlternativaC)
+                            </label>
+                            <label class="list-group-item list-group-item-action">
+                                <input class="form-check-input me-2" type="radio" name="respostas[@(questao.Id)]" value="D" id="q@(questao.Id)aD">
+                                <strong>D)</strong> @Html.Raw(questao.AlternativaD)
+                            </label>
+                            <label class="list-group-item list-group-item-action">
+                                <input class="form-check-input me-2" type="radio" name="respostas[@(questao.Id)]" value="E" id="q@(questao.Id)aE">
+                                <strong>E)</strong> @Html.Raw(questao.AlternativaE)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="text-center mt-4 mb-5">
+                <button type="submit" class="btn btn-success btn-lg">Enviar Respostas</button>
+            </div>
+        </form>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center" role="alert">
+            <h4 class="alert-heading">Nenhum Questionário Encontrado!</h4>
+            <p>Não foi possível carregar o questionário ou ele não contém questões.</p>
+            <hr>
+            <p class="mb-0">Por favor, tente novamente mais tarde ou contate o suporte se o problema persistir.</p>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-primary mt-3">Voltar para a Página Inicial</a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <style>
+        .card-text {
+            space: pre-wrap; 
+        }
+        .list-group-item-action {
+            cursor: pointer;
+        }
+        .list-group-item-action:hover {
+            background-color: #00FFFF;
+        }
+        .form-check-input {
+            margin-top: 0.4em;
+        }
+    </style>
+}
+
