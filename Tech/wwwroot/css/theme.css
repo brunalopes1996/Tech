@@ -21,22 +21,22 @@
   
   /* Light Theme */
   html.light-theme {
-    --body-bg: #f8f9fa; /* Light gray */
-    --body-color: #212529; /* Dark gray */
-    --navbar-bg: #e9ecef; /* Lighter gray for navbar */
-    --navbar-color: rgba(0, 0, 0, 0.55);
-    --navbar-hover-color: rgba(0, 0, 0, 0.7);
-    --navbar-active-color: #000;
-    --card-bg: #ffffff; /* White */
-    --card-color: #212529;
-    --footer-color: #6c757d; /* Standard muted color */
-    --link-color: #0d6efd; /* Standard Bootstrap blue */
+    --body-bg: #E7DBE8; /* Light gray */
+    --body-color: #00ffff; /* Dark gray */
+    --navbar-bg: #b194c4; /* Lighter gray for navbar */
+    --navbar-color: #00ffff;
+    --navbar-hover-color: #00ffff;
+    --navbar-active-color: #00ffff;
+    --card-bg: #c3acd3; /* White */
+    --card-color: #c3acd3;
+    --footer-color: #7d6e6c; /* Standard muted color */
+    --link-color: #00ffff; /* Standard Bootstrap blue */
     --link-hover-color: #0a58ca;
     --button-bg: #0d6efd; /* Standard Bootstrap blue */
     --button-color: #fff;
     --button-hover-bg: #0b5ed7;
-    --input-bg: #fff;
-    --input-color: #212529;
+    --input-bg: #f8f1f1;
+    --input-color: #f1f0ef;
     --input-border: #ced4da;
   }
   
@@ -45,6 +45,7 @@
     background-color: var(--body-bg);
     color: var(--body-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+  
   }
   
   .navbar {
