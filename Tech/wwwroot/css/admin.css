@@ -6806,7 +6806,7 @@ textarea.form-control-lg {
   right: 0;
   left: 0;
   z-index: 1030;
-}
+  }
 
 .fixed-bottom {
   position: fixed;
@@ -11019,7 +11019,7 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #212529;
+  background-color: rgba(23, 2, 41, 0.9);
   color: rgba(255, 255, 255, 0.5);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
@@ -11044,7 +11044,7 @@ body {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: #343a40;
+  background-color: rgba(23, 2, 41, 0.9);
 }
 
 .sb-sidenav-light {

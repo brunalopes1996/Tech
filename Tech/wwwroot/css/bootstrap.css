@@ -3082,19 +3082,19 @@ textarea.form-control-lg {
 
 .btn-secondary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ea39b8;
-  --bs-btn-border-color: #ea39b8;
+  --bs-btn-bg: #560b79;
+  --bs-btn-border-color: #560b79;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #c7309c;
-  --bs-btn-hover-border-color: #bb2e93;
+  --bs-btn-hover-bg: #560b79;
+  --bs-btn-hover-border-color: #560b79;
   --bs-btn-focus-shadow-rgb: 237, 87, 195;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #bb2e93;
-  --bs-btn-active-border-color: #b02b8a;
+  --bs-btn-active-bg: #560b79;
+  --bs-btn-active-border-color: #560b79;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ea39b8;
-  --bs-btn-disabled-border-color: #ea39b8;
+  --bs-btn-disabled-bg: #560b79;
+  --bs-btn-disabled-border-color: #560b79;
 }
 
 .btn-success {
@@ -3217,19 +3217,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #ea39b8;
-  --bs-btn-border-color: #ea39b8;
+  --bs-btn-color: #6f42c1;
+  --bs-btn-border-color: #6f42c1;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ea39b8;
-  --bs-btn-hover-border-color: #ea39b8;
+  --bs-btn-hover-bg: #6f42c1;
+  --bs-btn-hover-border-color: #6f42c1;
   --bs-btn-focus-shadow-rgb: 234, 57, 184;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ea39b8;
-  --bs-btn-active-border-color: #ea39b8;
+  --bs-btn-active-bg: #6f42c1;
+  --bs-btn-active-border-color: #6f42c1;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ea39b8;
+  --bs-btn-disabled-color: #6f42c1;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ea39b8;
+  --bs-btn-disabled-border-color: #6f42c1;
   --bs-gradient: none;
 }
 
@@ -12159,7 +12159,7 @@ table,
   border-width: 2px;
 }
 .btn-secondary, .btn-outline-secondary {
-  box-shadow: 0 0 2px rgba(234, 57, 184, 0.9), 0 0 4px rgba(234, 57, 184, 0.4), 0 0 1rem rgba(234, 57, 184, 0.3), 0 0 4rem rgba(234, 57, 184, 0.1);
+  box-shadow: 0 0 2px rgba(86, 11, 121, 0.25), 0 0 4px rgba(86, 11, 121, 0.25), 0 0 1rem rgba(86, 11, 121, 0.25), 0 0 4rem rgba(86, 11, 121, 0.25);
 }
 .btn-secondary {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 2px rgba(255, 255, 255, 0.3), 0 0 5px rgba(255, 255, 255, 0.2);
