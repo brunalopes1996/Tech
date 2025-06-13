@@ -195,31 +195,31 @@ namespace Tech.Migrations
                         {
                             Id = 1,
                             Nome = "Avança SP",
-                            Tipo = "Médio"
+                            Tipo = "medio"
                         },
                         new
                         {
                             Id = 2,
                             Nome = "Avança SP",
-                            Tipo = "Superior"
+                            Tipo = "superior"
                         },
                         new
                         {
                             Id = 3,
                             Nome = "Instituto Consulplan",
-                            Tipo = "Médio"
+                            Tipo = "medio"
                         },
                         new
                         {
                             Id = 4,
                             Nome = "Instituto Consulplan",
-                            Tipo = "Superior"
+                            Tipo = "superior"
                         },
                         new
                         {
                             Id = 5,
                             Nome = "UFRR",
-                            Tipo = "Superior"
+                            Tipo = "superior"
                         });
                 });
 

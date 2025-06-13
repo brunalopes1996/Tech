@@ -279,11 +279,11 @@ namespace Tech.Migrations
                 columns: new[] { "Id", "Nome", "Tipo" },
                 values: new object[,]
                 {
-                    { 1, "Avança SP", "Médio" },
-                    { 2, "Avança SP", "Superior" },
-                    { 3, "Instituto Consulplan", "Médio" },
-                    { 4, "Instituto Consulplan", "Superior" },
-                    { 5, "UFRR", "Superior" }
+                    { 1, "Avança SP", "medio" },
+                    { 2, "Avança SP", "superior" },
+                    { 3, "Instituto Consulplan", "medio" },
+                    { 4, "Instituto Consulplan", "superior" },
+                    { 5, "UFRR", "superior" }
                 });
 
             migrationBuilder.InsertData(

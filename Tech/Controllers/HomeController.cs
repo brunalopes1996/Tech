@@ -48,8 +48,8 @@ public class HomeController : Controller
         }
 
         // Map the route parameter to the expected database value (adjust casing if necessary based on DB data)
-        string tipoBancaFiltro = nivelEnsino.ToLower() == "medio" ? "Médio" :
-                                 nivelEnsino.ToLower() == "superior" ? "Superior" :
+        string tipoBancaFiltro = nivelEnsino.ToLower() == "medio" ? "medio" :
+                                 nivelEnsino.ToLower() == "superior" ? "superior" :
                                  null; // Handle potential unexpected values
 
         if (tipoBancaFiltro == null)

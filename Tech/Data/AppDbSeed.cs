@@ -10,11 +10,11 @@ public class AppDbSeed
     {
         List<Banca> bancas = new() {
 
-            new Banca { Id = 1, Nome = "Avança SP", Tipo = "Médio" },
-            new Banca { Id = 2, Nome = "Avança SP", Tipo = "Superior" },
-            new Banca { Id = 3, Nome = "Instituto Consulplan", Tipo = "Médio" },
-            new Banca { Id = 4, Nome = "Instituto Consulplan", Tipo = "Superior" },
-            new Banca { Id = 5, Nome = "UFRR", Tipo = "Superior" }
+            new Banca { Id = 1, Nome = "Avança SP", Tipo = "medio" },
+            new Banca { Id = 2, Nome = "Avança SP", Tipo = "superior" },
+            new Banca { Id = 3, Nome = "Instituto Consulplan", Tipo = "medio" },
+            new Banca { Id = 4, Nome = "Instituto Consulplan", Tipo = "superior" },
+            new Banca { Id = 5, Nome = "UFRR", Tipo = "superior" }
      };
 
 
