@@ -4,7 +4,7 @@ using Tech.Models;
 using Tech.Data;
 using Microsoft.EntityFrameworkCore; 
 using System.Threading.Tasks; 
-using System.Linq; // Required for LINQ methods like Where
+using System.Linq; 
 
 namespace Tech.Controllers;
 
