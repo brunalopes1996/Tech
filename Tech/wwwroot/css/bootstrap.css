@@ -8581,7 +8581,7 @@ textarea.form-control-lg {
 
 .text-body-secondary {
   --bs-text-opacity: 1;
-  color: var(--bs-secondary-color) !important;
+  color: #32fbe2 !important;
 }
 
 .text-body-tertiary {
@@ -8591,7 +8591,7 @@ textarea.form-control-lg {
 
 .text-body-emphasis {
   --bs-text-opacity: 1;
-  color: var(--bs-emphasis-color) !important;
+  color: #32fbe2 !important;
 }
 
 .text-reset {
