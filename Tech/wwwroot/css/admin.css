@@ -5980,7 +5980,7 @@ textarea.form-control-lg {
   }
 }
 .carousel-indicators .active {
-  opacity: 1;
+  opacity: 0;
 }
 
 .carousel-caption {
@@ -5990,7 +5990,7 @@ textarea.form-control-lg {
   left: 15%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  color: #fff;
+  color: rgba(0, 0, 0, 0);
   text-align: center;
 }
 

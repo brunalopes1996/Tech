@@ -9,3 +9,12 @@
   transition-duration: 1.4s;
   z-index: 100;
 }
+
+.carouselConcursos, .carousel-item{
+  max-height: 300px;
+  height:300px;
+}
+
+.carouselConcursos img{
+  height: 100%;
+}
