@@ -1,141 +1,153 @@
 /* Default (Dark Theme - based on existing bootstrap.css 'vapor') */
 :root {
-    --body-bg: #1c0647;
-    --body-color: #32fbe2;
-    --navbar-bg: #170229; /* From bootstrap.css .bg-dark */
-    --navbar-color: rgba(255, 255, 255, 0.55); /* From bootstrap.css .navbar-dark .navbar-nav .nav-link */
-    --navbar-hover-color: rgba(255, 255, 255, 0.75); /* From bootstrap.css .navbar-dark .navbar-nav .nav-link:hover */
-    --navbar-active-color: #fff; /* From bootstrap.css .navbar-dark .navbar-nav .nav-link.active */
-    --card-bg: #261e35; /* A slightly lighter dark shade */
-    --card-color: #dee2e6;
-    --footer-color: rgba(50, 251, 226, 0.3); /* From bootstrap.css .blockquote-footer */
-    --link-color: #a98eda; /* From bootstrap.css [data-bs-theme=dark] --bs-link-color */
-    --link-hover-color: #baa5e1; /* From bootstrap.css [data-bs-theme=dark] --bs-link-hover-color */
-    --button-bg: #6f42c1; /* Primary color */
-    --button-color: #fff;
-    --button-hover-bg: #5e37a6; /* Darker primary */
-    --input-bg: #261e35;
-    --input-color: #dee2e6;
-    --input-border: #495057;
-  }
-  
-  /* Light Theme */
-  html.light-theme {
-    --body-bg: #E7DBE8; /* Light gray */
-    --body-color: #00ffff; /* Dark gray */
-    --navbar-bg: #b194c4; /* Lighter gray for navbar */
-    --navbar-color: #00ffff;
-    --navbar-hover-color: #00ffff;
-    --navbar-active-color: #00ffff;
-    --card-bg: #c3acd3; /* White */
-    --card-color: #c3acd3;
-    --footer-color: #7d6e6c; /* Standard muted color */
-    --link-color: #00ffff; /* Standard Bootstrap blue */
-    --link-hover-color: #0a58ca;
-    --button-bg: #0d6efd; /* Standard Bootstrap blue */
-    --button-color: #fff;
-    --button-hover-bg: #0b5ed7;
-    --input-bg: #f8f1f1;
-    --input-color: #f1f0ef;
-    --input-border: #ced4da;
-  }
-  
-  /* Apply variables */
-  body {
-    background-color: var(--body-bg);
-    color: var(--body-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  
-  }
-  
-  .navbar {
-    background-color: var(--navbar-bg) !important; /* Override Bootstrap */
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link {
-    color: var(--navbar-color);
-  }
-  html.light-theme .navbar-dark .navbar-nav .nav-link { /* Adjust for light theme */
-     color: var(--navbar-color);
-  }
-  
-  
-  .navbar-dark .navbar-nav .nav-link:hover,
-  .navbar-dark .navbar-nav .nav-link:focus {
-    color: var(--navbar-hover-color);
-  }
-  html.light-theme .navbar-dark .navbar-nav .nav-link:hover,
-  html.light-theme .navbar-dark .navbar-nav .nav-link:focus {
-     color: var(--navbar-hover-color);
-  }
-  
-  .navbar-dark .navbar-nav .nav-link.active,
-  .navbar-dark .navbar-nav .show > .nav-link {
-    color: var(--navbar-active-color);
-  }
-  html.light-theme .navbar-dark .navbar-nav .nav-link.active,
-  html.light-theme .navbar-dark .navbar-nav .show > .nav-link {
-     color: var(--navbar-active-color);
-  }
-  
-  
-  .card {
-    background-color: var(--card-bg);
-    color: var(--card-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .footer-principal {
-    color: var(--footer-color);
-    transition: color 0.3s ease;
-  }
-  
-  a {
-   color: var(--link-color);
-  }
-  a:hover {
-   color: var(--link-hover-color);
-  }
-  
-  .btn-primary {
-      background-color: var(--button-bg);
-      border-color: var(--button-bg);
-      color: var(--button-color);
-  }
-  .btn-primary:hover {
-      background-color: var(--button-hover-bg);
-      border-color: var(--button-hover-bg);
-      color: var(--button-color);
-  }
-  
-  .form-control {
-      background-color: var(--input-bg);
-      color: var(--input-color);
-      border-color: var(--input-border);
-  }
-  .form-control:focus {
-      background-color: var(--input-bg);
-      color: var(--input-color);
-      border-color: var(--bs-primary); /* Use primary color for focus */
-      box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
-  }
-  
-  /* Specific adjustments might be needed for other elements */
-  
-  /* Theme toggle button style adjustments */
-  #theme-toggle-button {
-    /* Let Bootstrap handle background, border, padding etc. */
-    /* We only adjust icon display */
-    font-size: 1rem; /* Adjust icon size if needed */
-    line-height: 1; /* Align icon better */
-  }
-  
-  /* Icons - Using simple text for now, recommend SVGs or icon font */
-  .theme-icon-light, .theme-icon-dark {
-      display: inline-block;
-  }
-  html:not(.light-theme) .theme-icon-light { display: none; } /* Hide sun in dark mode */
-  html.light-theme .theme-icon-dark { display: none; } /* Hide moon in light mode */
-  
-  
+  --body-bg: #1c0647;
+  --body-color: #32fbe2;
+  --navbar-bg: #170229; /* From bootstrap.css .bg-dark */
+  --navbar-color: rgba(255, 255, 255, 0.55); /* From bootstrap.css .navbar-dark .navbar-nav .nav-link */
+  --navbar-hover-color: rgba(255, 255, 255, 0.75); /* From bootstrap.css .navbar-dark .navbar-nav .nav-link:hover */
+  --navbar-active-color: #fff; /* From bootstrap.css .navbar-dark .navbar-nav .nav-link.active */
+  --card-bg: #261e35; /* A slightly lighter dark shade */
+  --card-color: #dee2e6;
+  --footer-color: rgba(50, 251, 226, 0.3); /* From bootstrap.css .blockquote-footer */
+  --link-color: #a98eda; /* From bootstrap.css [data-bs-theme=dark] --bs-link-color */
+  --link-hover-color: #baa5e1; /* From bootstrap.css [data-bs-theme=dark] --bs-link-hover-color */
+  --button-bg: #6f42c1; /* Primary color */
+  --button-color: #fff;
+  --button-hover-bg: #5e37a6; /* Darker primary */
+  --input-bg: #261e35;
+  --input-color: #dee2e6;
+  --input-border: #495057;
+}
+
+/* Light Theme */
+html.light-theme {
+  --body-bg: #FFFFFF; /* Container branco */
+  --body-color: #000000; /* Letras pretas */
+  --navbar-bg: #b194c4; /* Mantém a cor do navbar */
+  --navbar-color: #000000;
+  --navbar-hover-color: #000000;
+  --navbar-active-color: #000000;
+  --card-bg: #FFFFFF; /* Fundo branco para questões */
+  --card-color: #000000; /* Letras pretas para questões */
+  --footer-color: #7d6e6c; /* Standard muted color */
+  --link-color: #000000; /* Links pretos */
+  --link-hover-color: #0a58ca;
+  --button-bg: #0d6efd; /* Standard Bootstrap blue */
+  --button-color: #fff;
+  --button-hover-bg: #0b5ed7;
+  --input-bg: #f8f1f1;
+  --input-color: #000000;
+  --input-border: #ced4da;
+  --selected-option-color: #1c0647; /* Roxo escuro para alternativa selecionada */
+}
+
+/* Apply variables */
+body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important; /* Override Bootstrap */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-color);
+}
+html.light-theme .navbar-dark .navbar-nav .nav-link { /* Adjust for light theme */
+   color: var(--navbar-color);
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--navbar-hover-color);
+}
+html.light-theme .navbar-dark .navbar-nav .nav-link:hover,
+html.light-theme .navbar-dark .navbar-nav .nav-link:focus {
+   color: var(--navbar-hover-color);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--navbar-active-color);
+}
+html.light-theme .navbar-dark .navbar-nav .nav-link.active,
+html.light-theme .navbar-dark .navbar-nav .show > .nav-link {
+   color: var(--navbar-active-color);
+}
+
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card header das questões com a cor do navbar */
+html.light-theme .card-header {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-color);
+}
+
+/* Cor da alternativa selecionada */
+html.light-theme .form-check-input:checked + .form-check-label {
+  color: var(--selected-option-color);
+}
+
+.footer-principal {
+  color: var(--footer-color);
+  transition: color 0.3s ease;
+}
+
+a {
+ color: var(--link-color);
+}
+a:hover {
+ color: var(--link-hover-color);
+}
+
+.btn-primary {
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+    color: var(--button-color);
+}
+.btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    color: var(--button-color);
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    border-color: var(--input-border);
+}
+.form-control:focus {
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    border-color: var(--bs-primary); /* Use primary color for focus */
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Specific adjustments might be needed for other elements */
+
+/* Theme toggle button style adjustments */
+#theme-toggle-button {
+  /* Let Bootstrap handle background, border, padding etc. */
+  /* We only adjust icon display */
+  font-size: 1rem; /* Adjust icon size if needed */
+  line-height: 1; /* Align icon better */
+}
+
+/* Icons - Using simple text for now, recommend SVGs or icon font */
+.theme-icon-light, .theme-icon-dark {
+    display: inline-block;
+}
+html:not(.light-theme) .theme-icon-light { display: none; } /* Hide sun in dark mode */
+html.light-theme .theme-icon-dark { display: none; } /* Hide moon in light mode */
+
+

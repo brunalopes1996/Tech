@@ -28,11 +28,11 @@
   --bs-white: #b883e9;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-gray-100: #f8f9fa;
-  --bs-gray-200: #e9ecef;
-  --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
-  --bs-gray-500: #adb5bd;
+  --bs-gray-100: #000000;
+  --bs-gray-200: #000000;
+  --bs-gray-300: #000000;
+  --bs-gray-400: #000000;
+  --bs-gray-500: #000000;
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
@@ -94,11 +94,11 @@
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(50, 251, 226, 0.75);
   --bs-secondary-color-rgb: 50, 251, 226;
-  --bs-secondary-bg: #e9ecef;
+  --bs-secondary-bg: #000000;
   --bs-secondary-bg-rgb: 233, 236, 239;
   --bs-tertiary-color: rgba(50, 251, 226, 0.5);
   --bs-tertiary-color-rgb: 50, 251, 226;
-  --bs-tertiary-bg: #f8f9fa;
+  --bs-tertiary-bg: #000000;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
   --bs-link-color: #32fbe2;
@@ -111,7 +111,7 @@
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 0;
   --bs-border-style: solid;
-  --bs-border-color: #dee2e6;
+  --bs-border-color: #000000;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.15rem;
   --bs-border-radius-sm: 0.05rem;
@@ -12066,7 +12066,7 @@ textarea.form-control-lg {
 body {
   min-height: 100vh;
   /* background-image: linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); */
-  text-shadow: 0 0 1px rgba(50, 251, 226, 0.3), 0 0 2px rgba(50, 251, 226, 0.3), 0 0 5px rgba(50, 251, 226, 0.2);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 1), 0 0 2px rgba(255, 255, 255, 1), 0 0 5px rgba(255, 255, 255, 1);
 }
 
 h1,
@@ -12159,10 +12159,10 @@ table,
   border-width: 2px;
 }
 .btn-secondary, .btn-outline-secondary {
-  box-shadow: 0 0 2px rgba(86, 11, 121, 0.25), 0 0 4px rgba(86, 11, 121, 0.25), 0 0 1rem rgba(86, 11, 121, 0.25), 0 0 4rem rgba(86, 11, 121, 0.25);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0), 0 0 4px rgba(255, 255, 255, 0), 0 0 1rem rgba(255, 255, 255, 0), 0 0 4rem rgba(255, 255, 255, 0);
 }
 .btn-secondary {
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 2px rgba(255, 255, 255, 0.3), 0 0 5px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0), 0 0 2px rgba(255, 255, 255, 0), 0 0 5px rgba(255, 255, 255, 0);
 }
 .btn-outline-secondary {
   color: #fff;
