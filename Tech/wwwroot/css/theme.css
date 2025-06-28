@@ -23,22 +23,22 @@
 html.light-theme {
   --body-bg: #FFFFFF; /* Container branco */
   --body-color: #000000; /* Letras pretas */
-  --navbar-bg: #b194c4; /* Mantém a cor do navbar */
+  --navbar-bg: #FFFFFF; /* Navbar branco */
   --navbar-color: #000000;
   --navbar-hover-color: #000000;
   --navbar-active-color: #000000;
   --card-bg: #FFFFFF; /* Fundo branco para questões */
   --card-color: #000000; /* Letras pretas para questões */
-  --footer-color: #7d6e6c; /* Standard muted color */
+  --footer-color: #000000; /* Footer preto */
   --link-color: #000000; /* Links pretos */
-  --link-hover-color: #0a58ca;
-  --button-bg: #0d6efd; /* Standard Bootstrap blue */
-  --button-color: #fff;
-  --button-hover-bg: #0b5ed7;
-  --input-bg: #f8f1f1;
+  --link-hover-color: #000000;
+  --button-bg: #000000; /* Botão preto */
+  --button-color: #FFFFFF;
+  --button-hover-bg: #000000;
+  --input-bg: #FFFFFF;
   --input-color: #000000;
-  --input-border: #ced4da;
-  --selected-option-color: #1c0647; /* Roxo escuro para alternativa selecionada */
+  --input-border: #000000;
+  --selected-option-color: #000000; /* Alternativa selecionada preta */
 }
 
 /* Apply variables */
@@ -81,9 +81,9 @@ html.light-theme .navbar-dark .navbar-nav .show > .nav-link {
 }
 
 
-.card {
-  background-color: var(--card-bg);
-  color: var(--card-color);
+.card, .card-body {
+  background-color: var(--card-bg) !important;
+  color: var(--card-color) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
