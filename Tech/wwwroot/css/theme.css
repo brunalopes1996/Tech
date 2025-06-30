@@ -23,12 +23,12 @@
 html.light-theme {
   --body-bg: #FFFFFF; /* Container branco */
   --body-color: #000000; /* Letras pretas */
-  --navbar-bg: #FFFFFF; /* Navbar branco */
-  --navbar-color: #000000;
-  --navbar-hover-color: #000000;
-  --navbar-active-color: #000000;
-  --card-bg: #FFFFFF; /* Fundo branco para questões */
-  --card-color: #000000; /* Letras pretas para questões */
+  --navbar-bg: #170229; /* Navbar branco */
+  --navbar-color: rgba(255, 255, 255, 0.55);
+  --navbar-hover-color: rgba(255, 255, 255, 0.75);
+  --navbar-active-color: #fff;
+  --card-bg: #261e35;
+  --card-color: #FFFFFF;
   --footer-color: #000000; /* Footer preto */
   --link-color: #000000; /* Links pretos */
   --link-hover-color: #000000;
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--navbar-bg) !important; /* Override Bootstrap */
+  background-color: #170229 !important; /* Override Bootstrap */
   transition: background-color 0.3s ease;
 }
 

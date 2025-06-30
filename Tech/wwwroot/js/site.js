@@ -3,44 +3,69 @@
 
 // Write your JavaScript code.
 
+// Function to update logo visibility based on current theme
+function updateLogoVisibility() {
+    const htmlElement = document.documentElement;
+    const logoDark = document.querySelector('.logo-dark');
+    const logoLight = document.querySelector('.logo-light');
+
+    if (htmlElement.classList.contains('light-theme')) {
+        // Light theme: show light logo, hide dark logo
+        if (logoDark) logoDark.style.display = 'none';
+        if (logoLight) logoLight.style.display = 'inline';
+    } else {
+        // Dark theme: show dark logo, hide light logo
+        if (logoDark) logoDark.style.display = 'inline';
+        if (logoLight) logoLight.style.display = 'none';
+    }
+}
+
 // Theme Toggle Logic
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded and parsed"); // Debug log 1
+    console.log("DOM fully loaded and parsed");
     const themeToggleButton = document.getElementById("theme-toggle-button");
-    const htmlElement = document.documentElement; // Target <html> element
+    const htmlElement = document.documentElement;
 
     if (!themeToggleButton) {
-        console.error("Theme toggle button not found!"); // Debug log 2
-        return; // Exit if button not found
+        console.error("Theme toggle button not found!");
+        return;
     }
-    console.log("Theme toggle button found:", themeToggleButton); // Debug log 3
+    console.log("Theme toggle button found:", themeToggleButton);
 
+    // Get saved theme from localStorage
     const currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
-    console.log("Current theme from localStorage:", currentTheme); // Debug log 4
+    console.log("Current theme from localStorage:", currentTheme);
 
     // Apply saved theme on initial load
     if (currentTheme === "light") {
         htmlElement.classList.add("light-theme");
-        console.log("Applied light theme on load"); // Debug log 5
+        console.log("Applied light theme on load");
     } else {
         htmlElement.classList.remove("light-theme");
-        console.log("Applied dark theme (default) on load"); // Debug log 6
+        console.log("Applied dark theme (default) on load");
     }
 
-    // Add click listener to the button
-    themeToggleButton.addEventListener("click", () => {
-        console.log("Theme toggle button clicked!"); // Debug log 7
+    // Update logo visibility after applying initial theme
+    updateLogoVisibility();
+
+    // Add click listener to the theme toggle button
+    /*themeToggleButton.addEventListener("click", () => {
+        console.log("Theme toggle button clicked!");
+        
         // Toggle the .light-theme class on the <html> element
         htmlElement.classList.toggle("light-theme");
-        console.log("Toggled light-theme class. Current classes:", htmlElement.className); // Debug log 8
+        console.log("Toggled light-theme class. Current classes:", htmlElement.className);
 
-        // Update localStorage
+        // Determine current theme and save to localStorage
         let theme = "dark"; // Default to dark
         if (htmlElement.classList.contains("light-theme")) {
             theme = "light";
         }
         localStorage.setItem("theme", theme);
-        console.log("Saved theme to localStorage:", theme); // Debug log 9
-    });
+        console.log("Saved theme to localStorage:", theme);
+
+        // Update logo visibility after theme change
+        updateLogoVisibility();
+    });*/
 });
 
