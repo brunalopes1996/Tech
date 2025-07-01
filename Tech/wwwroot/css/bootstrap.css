@@ -8591,7 +8591,7 @@ textarea.form-control-lg {
 
 .text-body-emphasis {
   --bs-text-opacity: 1;
-  color: #32fbe2 !important;
+  color: #000 !important;
 }
 
 .text-reset {

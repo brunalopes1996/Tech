@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLogoVisibility();
 
     // Add click listener to the theme toggle button
-    /*themeToggleButton.addEventListener("click", () => {
+    themeToggleButton.addEventListener("click", () => {
         console.log("Theme toggle button clicked!");
         
         // Toggle the .light-theme class on the <html> element
@@ -66,6 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Update logo visibility after theme change
         updateLogoVisibility();
-    });*/
+    });
 });
 

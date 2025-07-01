@@ -51,21 +51,20 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Gráfico de desempenho (opcional) -->
+
+
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="progress" style="height: 30px;">
-                        <div class="progress-bar bg-success" role="progressbar" 
-                             style="width: @(Model.Percentual)%;" 
-                             aria-valuenow="@Model.Percentual" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: @(Model.Percentual)%;"
+                            aria-valuenow="@Model.Percentual" aria-valuemin="0" aria-valuemax="100">
                             @Model.Percentual.ToString("F1")%
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Detalhes das respostas (opcional) -->
+
+
             @if (Model.DetalhesRespostas != null && Model.DetalhesRespostas.Any())
             {
                 <div class="mt-5">
@@ -76,16 +75,15 @@
                             var detalhe = Model.DetalhesRespostas[i];
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading@(i)">
-                                    <button class="accordion-button @(detalhe.Acertou ? "text-success" : "text-danger") @(i > 0 ? "collapsed" : "")" 
-                                            type="button" data-bs-toggle="collapse" 
-                                            data-bs-target="#collapse@(i)" 
-                                            aria-expanded="@(i == 0 ? "true" : "false")" 
-                                            aria-controls="collapse@(i)">
-                                        Questão @(i+1): @(detalhe.Acertou ? "Correta" : "Incorreta")
+                                    <button
+                                        class="accordion-button @(detalhe.Acertou ? "text-success" : "text-danger") @(i > 0 ? "collapsed" : "")"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse@(i)"
+                                        aria-expanded="@(i == 0 ? "true" : "false")" aria-controls="collapse@(i)">
+                                        Questão @(i + 1): @(detalhe.Acertou ? "Correta" : "Incorreta")
                                     </button>
                                 </h2>
-                                <div id="collapse@(i)" class="accordion-collapse collapse @(i == 0 ? "show" : "")" 
-                                     aria-labelledby="heading@(i)" data-bs-parent="#accordionRespostas">
+                                <div id="collapse@(i)" class="accordion-collapse collapse @(i == 0 ? "show" : "")"
+                                    aria-labelledby="heading@(i)" data-bs-parent="#accordionRespostas">
                                     <div class="accordion-body">
                                         <p><strong>Pergunta:</strong> @Html.Raw(detalhe.QuestaoTexto)</p>
                                         <p><strong>Sua resposta:</strong> @detalhe.RespostaUsuario</p>
@@ -97,9 +95,10 @@
                     </div>
                 </div>
             }
-            
+
             <div class="text-center mt-5">
-                <a asp-action="ExibirQuestionario" asp-controller="Home" class="btn btn-primary me-2">Tentar Novamente</a>
+                <a asp-action="ExibirQuestionario" asp-controller="Home" class="btn btn-primary me-2">Tentar
+                    Novamente</a>
                 <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Voltar para a Página Inicial</a>
             </div>
         </div>
@@ -108,10 +107,10 @@
 
 @section Scripts {
     <script>
-        // Opcional: Adicionar animações ou efeitos visuais
-        $(document).ready(function() {
-            // Animar a barra de progresso
-            $('.progress-bar').each(function() {
+
+        $(document).ready(function () {
+
+            $('.progress-bar').each(function () {
                 var width = $(this).attr('aria-valuenow') + '%';
                 $(this).animate({ width: width }, 1000);
             });

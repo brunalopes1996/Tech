@@ -11,8 +11,8 @@
 }
 
 .carouselConcursos, .carousel-item{
-  max-height: 600px;
-  height:600px;
+  max-height: 450px;
+  height:450px;
 }
 
 .carouselConcursos img{
